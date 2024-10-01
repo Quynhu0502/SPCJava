@@ -10,21 +10,19 @@ import java.util.Scanner;
  *
  * @author SPC
  */
-public class Bai8_Tinhluythua {
+public class bai9_tinhluythua {
     public static void main(String[] args) {
-        System.out.println("TINH LUY THUA ()");
-       
-        double so,mu,lt=1;
+        System.out.println(" TINH GIAI THUA)");
+        int so, gt=1;
         Scanner sc = new Scanner (System.in);
-        System.out.print("nhap so ");
-         so = sc.nextDouble();
-        System.out.print("nhap mu ");
-         mu = sc.nextDouble();
-        for (double i =1 ; i <= mu; i++)
-        {
-            lt *= so;
+        System.out.print("nhap so: ");
+         so = sc.nextInt();
+         for (int i = 1; i <= so; i++)
+        { 
+            gt *=i;
         }
-           System.out.println("Luy thua: "+ lt);
+         System.out.println("Giai thua: "+ gt);
     }
+    
     
 }
