@@ -4,6 +4,8 @@
  */
 package spc.edu;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SPC
@@ -26,29 +28,31 @@ public class Bai12_PtBac2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        txt_a = new javax.swing.JLabel();
+        txt_b = new javax.swing.JLabel();
+        txt_c = new javax.swing.JLabel();
+        btn_Tinh = new javax.swing.JButton();
+        txt_kq = new javax.swing.JTextField();
+        txt_sob = new javax.swing.JTextField();
+        txt_soa = new javax.swing.JTextField();
+        txt_soc = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
+        txt_a.setText("Số a");
 
-        jButton1.setText("jButton1");
+        txt_b.setText("Số b");
 
-        jLabel2.setText("jLabel1");
+        txt_c.setText("Số c");
 
-        jButton2.setText("jButton1");
+        btn_Tinh.setText("Tính");
+        btn_Tinh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_TinhActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setText("jLabel1");
-
-        jButton3.setText("jButton1");
-
-        jButton4.setText("jButton4");
+        txt_kq.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -58,46 +62,82 @@ public class Bai12_PtBac2 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_b)
+                            .addComponent(txt_a)
+                            .addComponent(txt_c))
+                        .addGap(59, 59, 59)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(66, 66, 66)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(66, 66, 66)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(66, 66, 66)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txt_soa, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                            .addComponent(txt_sob)
+                            .addComponent(txt_soc)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(jButton4)))
-                .addContainerGap(146, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
+                        .addComponent(btn_Tinh)
+                        .addGap(26, 26, 26)
+                        .addComponent(txt_kq, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(txt_a, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_soa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton2))
-                .addGap(34, 34, 34)
+                    .addComponent(txt_b)
+                    .addComponent(txt_sob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton3))
-                .addGap(37, 37, 37)
-                .addComponent(jButton4)
-                .addContainerGap(71, Short.MAX_VALUE))
+                    .addComponent(txt_c)
+                    .addComponent(txt_soc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addComponent(btn_Tinh))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txt_kq, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_TinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TinhActionPerformed
+       
+            double a,b,c,x1,x2;
+       
+          a=Double.parseDouble(txt_soa.getText());     
+          b=Double.parseDouble(txt_sob.getText()); 
+          c=Double.parseDouble(txt_soc.getText()); //
+          
+          double delta = b * b - 4 * a * c;
+          
+       if (delta < 0)
+    {
+         txt_kq.setText(String.valueOf( "pt vo nghiem"));
+         //JOptionPane.showMessageDialog(null, "Vui long nhap so", "THONG BAO", JOptionPane.WARNING_MESSAGE);
+    }
+    else if (delta == 0 )
+    {
+        x1 = x2= -b / (2 * a);
+       txt_kq.setText(String.valueOf( "pt co nghiem kep :" + x1));
+    }
+    else if (delta > 0)
+    
+    {   x1 = (-b +- Math.sqrt(delta)) / (2 * a);
+        x2 = (-b + - Math.sqrt(delta)) / (2 * a);
+       txt_kq.setText(String.valueOf( "Phuong trinh co 2 nghiem phan biet"));
+       txt_kq.setText(String.valueOf(  "x1 = " + x1));
+       txt_kq.setText(String.valueOf( "x2 = " + x2));
+         
+    }
+    
+    
+    }//GEN-LAST:event_btn_TinhActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,12 +175,13 @@ public class Bai12_PtBac2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btn_Tinh;
+    private javax.swing.JLabel txt_a;
+    private javax.swing.JLabel txt_b;
+    private javax.swing.JLabel txt_c;
+    private javax.swing.JTextField txt_kq;
+    private javax.swing.JTextField txt_soa;
+    private javax.swing.JTextField txt_sob;
+    private javax.swing.JTextField txt_soc;
     // End of variables declaration//GEN-END:variables
 }
