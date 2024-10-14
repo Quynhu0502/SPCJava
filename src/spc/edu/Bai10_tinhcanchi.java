@@ -98,7 +98,7 @@ public class Bai10_tinhcanchi extends javax.swing.JFrame {
          jTextArea1.append(nam + " : " + cn + " " + ci +"\n");
 
         } catch (Exception e) {
-            JOptionPane.showConfirmDialog(null, " Vui lòng nhập năm ", "Thông báo", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showConfirmDialog(null, " Vui lòng nhập năm ", "Thông báo", JOptionPane.WARNING_MESSAGE);//
         }
     }//GEN-LAST:event_btn_TinhActionPerformed
 
