@@ -13,19 +13,25 @@ import java.util.Scanner;
 public class de1cau2 {
      public static void main(String[] args) {
         System.out.println("TINH CHU VI DIEN TICH HINH TAM GIAC()");
-        double dai, rong, chuvi, dientich;
-        Scanner sc = new Scanner (System.in);
-        System.out.print("nhap chieu dai ");
-        dai = sc.nextDouble();
+         double A, B, C, chuvi, dientich;
         
-        System.out.print("nhap chieu rong ");
-        rong = sc.nextDouble();
+        Scanner sc = new Scanner(System.in);
         
-        chuvi= (dai + rong)*2;
-        dientich = dai * rong;
+        System.out.print("Nhap A: ");
+        A = sc.nextDouble();
         
-         System.out.println("Chu Vi: "+ chuvi);
-         System.out.println("Dien tich: "+ dientich);
+        System.out.print("Nhap  B: ");
+        B = sc.nextDouble();
+        
+        System.out.print("Nhap  C: ");
+        C = sc.nextDouble();
+
+        chuvi = A + B + C;
+        
+        dientich = Math.sqrt(chuvi / 2 * ((chuvi / 2) - A) * (chuvi / 2 - B) * (chuvi / 2 - C));
+        
+        System.out.println("Chu Vi : " + chuvi + " (cm)");
+        System.out.println("Dien Tich: " + dientich + " (cm2)");
+        
     }
 }
-
