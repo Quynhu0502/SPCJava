@@ -14,6 +14,7 @@ public class de1cau2 {
      public static void main(String[] args) {
         System.out.println("TINH CHU VI DIEN TICH HINH TAM GIAC()");
          double A, B, C, chuvi, dientich;
+         //
         
         Scanner sc = new Scanner(System.in);
         
